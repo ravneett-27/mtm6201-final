@@ -21,7 +21,7 @@
     <div class="container-fluid">
 
         <!-- Navbar with logo, search, and user icon -->
-        <nav class="navbar navbar-light px-3 py-2" role="banner" aria-label="Primary navigation">
+        <nav class="navbar navbar-light px-3 py-2" aria-label="Primary navigation">
             <div class="container-fluid d-flex align-items-center">
                 <a href="index.html" class="navbar-brand d-flex align-items-center" aria-label="Pawprints Rescue Home">
                     <img src="images/logo.png" alt="Pawprints Rescue Logo" class="rounded-circle me-2" width="40"
@@ -39,7 +39,7 @@
         </nav>
 
         <!-- Main Menu Links -->
-        <nav class="d-flex justify-content-around py-2" role="navigation" aria-label="Main menu">
+        <nav class="d-flex justify-content-around py-2" aria-label="Main menu">
             <a href="about.html" class="text-dark">ABOUT</a>
             <a href="contact.html" class="text-dark">CONTACT</a>
             <a href="careers.html" class="text-dark">CAREERS</a>
@@ -56,6 +56,7 @@
 
             <!-- Highlight message -->
             <section class="container">
+                <h2 class="text-center">Discover your companion</h2>
                 <div class="highlight-box text-center my-3">Find your paw friend today!</div>
 
                 <!-- Mobile view: Buttons and dog image stacked -->
@@ -75,10 +76,10 @@
                 <div class="d-none d-lg-flex justify-content-center gap-4 my-5">
 
                     <!-- ADOPT Column -->
-                    <article class="d-flex flex-column text-start" style="max-width: 300px;"
-                        aria-labelledby="adopt-title">
+                    <article class="d-flex flex-column text-start" style="max-width: 300px;">
+                        <h2 class="visibly-hidden" id="adopt-title">Adopt Section</h2>>
                         <button class="btn btn-lg btn-outline-primary mb-3 w-100" type="button"
-                            id="adopt-title">ADOPT</button>
+                            id="adopt-title-1">ADOPT</button>
                         <p>“Ready to find your friend forever?”</p>
                         <p>
                             Every dog here has a story — and they’re all waiting for a second chance at love.
@@ -89,10 +90,10 @@
                     </article>
 
                     <!-- DONATE Column -->
-                    <article class="d-flex flex-column text-start" style="max-width: 300px;"
-                        aria-labelledby="donate-title">
+                    <article class="d-flex flex-column text-start" style="max-width: 300px;">
+                        <h2 class="visibly-hidden" id="donate-title">Donate</h2>
                         <button class="btn btn-lg btn-outline-primary mb-3 w-100" type="button"
-                            id="donate-title">DONATE</button>
+                            id="donate-title-1">DONATE</button>
                         <p>Support their second chance</p>
                         <p>
                             Your donations help provide food, shelter, medical care, and love to dogs in need.
@@ -103,10 +104,10 @@
                     </article>
 
                     <!-- VOLUNTEER Column -->
-                    <article class="d-flex flex-column text-start" style="max-width: 300px;"
-                        aria-labelledby="volunteer-title">
+                    <article class="d-flex flex-column text-start" style="max-width: 300px;">
+                        <h2 class="visibly-hidden" id="volunteer-title">Volunteer</h2>
                         <button class="btn btn-lg btn-outline-primary mb-3 w-100" type="button"
-                            id="volunteer-title">VOLUNTEER</button>
+                            id="volunteer-title-1">VOLUNTEER</button>
                         <p>Be the reason a tail wags today.</p>
                         <p>
                             Join our pack of passionate volunteers and help us care for, walk, and socialize our rescued
@@ -125,11 +126,11 @@
 
                         <!-- ADOPT Section -->
                         <article
-                            class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row"
-                            aria-labelledby="adopt-title-tablet">
+                            class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row">
                             <img src="images/adopt.png" class="d-none d-md-block ms-5"
                                 style="width: 275px; height: 300px;" alt="Adopt Icon" />
                             <div class="main-buttons text-start">
+                                <h2 class="visually-hidden" id="adopt-title-tablet-1">Adopt</h2>
                                 <button class="btn btn-lg btn-outline-primary mb-2 w-100" type="button"
                                     id="adopt-title-tablet">ADOPT</button>
                                 <p>“Ready to find your friend forever?”</p>
@@ -146,13 +147,13 @@
 
                         <!-- DONATE Section -->
                         <article
-                            class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row"
-                            aria-labelledby="donate-title-tablet">
+                            class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row">
                             <img src="images/donate.png" class="d-none d-md-block ms-5"
                                 style="width: 275px; height: 300px;" alt="Donate Icon" />
                             <div class="main-buttons text-start">
+                                <h2 class="visually-hidden" id="donate-title-tablet">Donate</h2>
                                 <button class="btn btn-lg btn-outline-primary mb-2 w-100" type="button"
-                                    id="donate-title-tablet">DONATE</button>
+                                    id="donate-title-tablet-1">DONATE</button>
                                 <p>Support their second chance</p>
                                 <p>
                                     Your donations help provide food, shelter, medical care, and love to dogs in need.
@@ -167,11 +168,11 @@
 
                         <!-- VOLUNTEER Section -->
                         <article
-                            class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row"
-                            aria-labelledby="volunteer-title-tablet">
+                            class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row">
                             <img src="images/volunteer.png" class="d-none d-md-block ms-5"
                                 style="width: 275px; height: 300px;" alt="Volunteer Icon" />
                             <div class="main-buttons text-start">
+                                <h2 class="visually-hidden" id="volunteer-title-tablet-1">Volunteer</h2>
                                 <button class="btn btn-lg btn-outline-primary mb-2 w-100" type="button"
                                     id="volunteer-title-tablet">VOLUNTEER</button>
                                 <p>Be the reason a tail wags today.</p>
@@ -194,22 +195,22 @@
                 <section class="text-center" aria-label="Featured animals">
                     <h3>Featured animals!</h3>
                     <div class="featured-images d-flex flex-wrap justify-content-center gap-3">
-                        <article class="featured-image-wrapper text-center" role="group" aria-label="Featured dog 1">
+                        <article class="featured-image-wrapper text-center" aria-label="Featured dog 1">
                             <img src="images/one.jpeg" alt="Portrait of dog 1" class="img-fluid rounded" />
                             <button class="learn-more-btn btn btn-outline-primary mt-2" type="button">Learn
                                 More</button>
                         </article>
-                        <article class="featured-image-wrapper text-center" role="group" aria-label="Featured dog 2">
+                        <article class="featured-image-wrapper text-center" aria-label="Featured dog 2">
                             <img src="images/two.jpg" alt="Portrait of dog 2" class="img-fluid rounded" />
                             <button class="learn-more-btn btn btn-outline-primary mt-2" type="button">Learn
                                 More</button>
                         </article>
-                        <article class="featured-image-wrapper text-center" role="group" aria-label="Featured dog 3">
+                        <article class="featured-image-wrapper text-center" aria-label="Featured dog 3">
                             <img src="images/three.jpeg" alt="Portrait of dog 3" class="img-fluid rounded" />
                             <button class="learn-more-btn btn btn-outline-primary mt-2" type="button">Learn
                                 More</button>
                         </article>
-                        <article class="featured-image-wrapper text-center" role="group" aria-label="Featured dog 4">
+                        <article class="featured-image-wrapper text-center" aria-label="Featured dog 4">
                             <img src="images/four.png" alt="Portrait of dog 4" class="img-fluid rounded" />
                             <button class="learn-more-btn btn btn-outline-primary mt-2" type="button">Learn
                                 More</button>
@@ -266,7 +267,7 @@
         </main>
 
         <!-- Footer Section -->
-        <footer class="pt-4 pb-3 px-3 bg-light" role="contentinfo">
+        <footer class="pt-4 pb-3 px-3 bg-light">
             <div class="container">
                 <div class="row text-center text-md-start">
                     <section class="col-4" aria-label="Organization information">
