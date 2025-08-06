@@ -1,15 +1,32 @@
-/* GLOBAL STYLES */
+/* ---------- CSS VARIABLES (customizing Bootstrap defaults) ---------- */
+:root {
+    --bs-body-bg: #FFE5B4;
+    --bs-body-color: #333;
+    --bs-primary: #f68b1f;
+    /* Orange shade for buttons/links */
+    --bs-primary-hover: #e57300;
+    /* Darker orange for hover */
+    --bs-font-sans-serif: 'Alata', sans-serif;
+    --bs-border-radius: 8px;
+    --bs-link-color: var(--bs-primary);
+    --bs-link-hover-color: var(--bs-primary-hover);
+}
+
+/* ---------- GLOBAL STYLES ---------- */
 html,
 body {
     overflow-x: hidden;
-    font-family: 'Alata', sans-serif;
-    background-color: #FFE5B4;
-    color: #333;
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    margin: 0;
+    padding: 0;
 }
 
 .container-fluid {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
@@ -21,23 +38,46 @@ img,
     max-width: 100%;
     height: auto;
     box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* NAVIGATION */
+/* ---------- NAVIGATION ---------- */
 .nav-icon {
     width: 40px;
     height: 40px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
 }
 
-/* BUTTON STYLES */
+.nav-icon:hover,
+.nav-icon:focus {
+    filter: brightness(85%);
+    outline: none;
+}
+
+/* ---------- BUTTON STYLES ---------- */
+.btn {
+    font-weight: 600;
+    border-radius: var(--bs-border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
 .btn-orange {
-    background-color: #FAF9F6;
-    color: #8D6E63;
+    background-color: #faf9f6;
+    color: #8d6e63;
     box-shadow: 2px 2px 4px #888;
+    border: none;
 }
 
-.btn-orange:hover {
-    background-color: #e57300;
+.btn-orange:hover,
+.btn-orange:focus {
+    background-color: var(--bs-primary-hover);
+    color: white;
+    outline: none;
 }
 
 .info-btn {
@@ -47,12 +87,19 @@ img,
     width: 100%;
     padding: 10px;
     text-align: left;
-    border-radius: 12px;
+    border-radius: var(--bs-border-radius);
+    transition: box-shadow 0.3s ease;
+}
+
+.info-btn:hover,
+.info-btn:focus {
+    box-shadow: 2px 4px 8px #666;
+    outline: none;
 }
 
 .main-buttons .btn,
 .news-buttons .btn {
-    background-color: #ff7b2d;
+    background-color: var(--bs-primary);
     color: white;
     margin-bottom: 10px;
     width: 140px;
@@ -62,39 +109,90 @@ img,
     max-width: 600px;
 }
 
-.btn-submit-custom {
-    background-color: #F77F00;
-    color: #FAF9F6;
+.btn-submit-custom,
+.submit-btn {
+    background-color: var(--bs-primary);
+    color: var(--bs-body-bg);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 100%;
 }
 
-
-.container-fluid img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.btn-submit-custom:hover,
+.btn-submit-custom:focus,
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: var(--bs-primary-hover);
+    color: white;
+    outline: none;
 }
 
-/* CONTACT PAGE */
+/* ---------- SKIP LINK (Accessibility) ---------- */
+.skip-link,
+.visually-hidden-focusable {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 100;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.skip-link:focus,
+.skip-link:active,
+.visually-hidden-focusable:focus,
+.visually-hidden-focusable:active {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #000;
+    z-index: 9999;
+}
+
+/* ---------- CONTACT PAGE ---------- */
 .contact-form {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.submit-btn {
-    background-color: #f68b1f;
-    color: white;
-    border: none;
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
     font-size: 0.9rem;
+    color: #444;
 }
 
-/* LOCATIONS */
+.contact-info a {
+    color: var(--bs-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+    color: var(--bs-primary-hover);
+    outline: none;
+}
+
+/* ---------- LOCATIONS ---------- */
 .locations img {
     width: 100%;
+    border-radius: var(--bs-border-radius);
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -109,13 +207,14 @@ img,
     }
 }
 
-/* HIGHLIGHT SECTION */
+/* ---------- HIGHLIGHT SECTION ---------- */
 .highlight-box {
     background-color: #ffcc6d;
     padding: 10px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: var(--bs-border-radius);
     margin: 10px 70px;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -124,7 +223,7 @@ img,
     }
 }
 
-/* FEATURED IMAGES */
+/* ---------- FEATURED IMAGES ---------- */
 .featured-images {
     display: flex;
     flex-wrap: nowrap;
@@ -144,6 +243,8 @@ img,
     width: 100px;
     height: 200px;
     display: block;
+    border-radius: var(--bs-border-radius);
+    object-fit: cover;
 }
 
 .learn-more-btn {
@@ -158,6 +259,13 @@ img,
     font-size: 0.8rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus {
+    background-color: rgba(0, 0, 0, 0.9);
+    outline: none;
 }
 
 @media (min-width: 768px) {
@@ -201,7 +309,7 @@ img,
     }
 
     .events-flex-container {
-        background-color: #ff7b2d;
+        background-color: var(--bs-primary);
     }
 
     .events-flex-container2 {
@@ -209,18 +317,19 @@ img,
     }
 }
 
-/* HOW WE OPERATE SECTION */
+/* ---------- HOW WE OPERATE SECTION ---------- */
 .how-we-operate-wrapper {
-    background-color: #8D6E63;
-    border-radius: 12px;
+    background-color: #8d6e63;
+    border-radius: var(--bs-border-radius);
     padding: 2rem;
     max-width: 700px;
     margin: 0 auto;
+    color: white;
 }
 
 .operate-box {
     padding: 1.25rem;
-    border-radius: 10px;
+    border-radius: var(--bs-border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,14 +337,14 @@ img,
 }
 
 .special-bg {
-    background-color: #F77F00;
-    color: white;
-    border-radius: 10px;
+    background-color: #f77f00;
+    border-radius: var(--bs-border-radius);
     padding: 1.25rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: white;
 }
 
 .default-bg {
@@ -253,17 +362,20 @@ img,
     text-align: center;
     border-radius: 6px;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .special-bg .operate-btn {
     color: white;
 }
 
-.operate-btn:hover {
+.operate-btn:hover,
+.operate-btn:focus {
     opacity: 0.9;
+    outline: none;
 }
 
-/* SHELTER IMAGES */
+/* ---------- SHELTER IMAGES ---------- */
 .shelter-images-container {
     display: flex;
     flex-direction: column;
@@ -274,6 +386,8 @@ img,
     width: 200px;
     height: auto;
     margin-bottom: 0;
+    border-radius: var(--bs-border-radius);
+    object-fit: cover;
 }
 
 @media (min-width: 992px) {
@@ -285,8 +399,6 @@ img,
     .shelter-images-container img {
         width: 32%;
         height: 150px;
-        object-fit: cover;
-        border-radius: 8px;
     }
 
     .shelter-location-wrapper {
@@ -302,14 +414,50 @@ img,
     }
 }
 
-/* FOOTER */
+/* ---------- FOOTER ---------- */
 footer {
     background-color: #fff;
     padding: 20px 0;
     border-top: 1px solid #ccc;
+    color: #333;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #333;
+    color: var(--bs-primary);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--bs-primary-hover);
+    outline: none;
+}
+
+/* ---------- LINKS & BUTTONS HOVER/FOCUS STATES ---------- */
+a,
+button {
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--bs-primary-hover);
+    outline: none;
+    text-decoration: underline;
+}
+
+button:hover,
+button:focus {
+    filter: brightness(90%);
+    outline: none;
+}
+
+/* ---------- RESPONSIVE CONTAINER PADDING (for very small devices) ---------- */
+@media (max-width: 320px) {
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

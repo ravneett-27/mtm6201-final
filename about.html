@@ -2,438 +2,427 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pawprints Rescue</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-light px-3 py-2">
-        <div class="container-fluid">
-            <img src="images/logo.png" alt="Paw Logo" class="rounded-circle me-2" width="40">
-            <form class="d-flex flex-grow-1 mx-2">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <img src="images/user.png" alt="User Icon" class="nav-icon">
-        </div>
-    </nav>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
 
-    <!-- Menu -->
-    <div class="d-flex justify-content-around py-2">
-        <a href="index.html" class="text-dark">HOME</a>
-        <a href="contact.html" class="text-dark">CONTACT</a>
-        <a href="#" class="text-dark">CAREERS</a>
-        <a href="#" class="text-dark">SHOP</a>
-    </div>
+    <!-- Header and Primary Navbar -->
+    <header role="banner">
+        <nav class="navbar navbar-light bg-light px-3 py-2" aria-label="Primary Navigation">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="index.html" class="navbar-brand d-flex align-items-center" aria-label="Pawprints Rescue Home">
+                    <img src="images/logo.png" alt="Pawprints Rescue Logo" class="rounded-circle me-2" width="40"
+                        height="40" />
+                    <span class="visually-hidden">Pawprints Rescue</span>
+                </a>
 
-    <!-- Lady Leads Section  for mobile and tablet-->
-    <div class="text-center mt-3 d-block d-lg-none">
-        <h5>OUR AMAZING LADY LEADS</h5>
-        <div class="row row-cols-3 g-2 justify-content-center">
+                <form class="d-flex flex-grow-1 mx-2" role="search" aria-label="Site Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                </form>
 
-            <!-- CEO -->
-            <div class="col text-center">
-                <img src="images/ceo.jpg" class="img-fluid lady-img" alt="CEO">
-                <p class="mb-1">CEO</p>
-                <p class="lady-bio mt-2 d-none d-md-block" style="text-align: left;">
-                    Leading with love and strategy to grow our shelter into a compassionate powerhouse.
-                </p>
-                <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn more</button>
+                <button class="btn btn-link p-0 border-0" aria-label="User Profile">
+                    <img src="images/user.png" alt="User Icon" class="nav-icon" width="40" height="40" />
+                </button>
+            </div>
+        </nav>
 
+        <nav class="bg-white border-top border-bottom py-2" aria-label="Secondary Navigation">
+            <div class="container d-flex justify-content-around">
+                <a href="index.html" class="nav-link text-dark" aria-current="page">Home</a>
+                <a href="contact.html" class="nav-link text-dark">Contact</a>
+                <a href="#" class="nav-link text-dark">Careers</a>
+                <a href="#" class="nav-link text-dark">Shop</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
+
+        <!-- Lady Leads Section -->
+        <section aria-labelledby="lady-leads-title" class="my-4 container">
+            <h2 id="lady-leads-title" class="text-center mb-4">Our Amazing Lady Leads</h2>
+
+            <!-- Mobile & Tablet -->
+            <div class="d-lg-none">
+                <div class="row row-cols-1 row-cols-sm-3 g-3 justify-content-center">
+
+                    <!-- CEO -->
+                    <article class="col text-center" role="group" aria-label="CEO - Maya Thompson">
+                        <picture>
+                            <source srcset="images/ceo-small.jpg 480w, images/ceo.jpg 800w"
+                                sizes="(max-width: 576px) 100vw, 33vw" />
+                            <img src="images/ceo.jpg" alt="Portrait of Maya Thompson, CEO"
+                                class="img-fluid lady-img rounded" />
+                        </picture>
+                        <h3 class="mt-2">CEO</h3>
+                        <p class="lady-bio mt-2 text-start d-none d-md-block">
+                            Leading with love and strategy to grow our shelter into a compassionate powerhouse.
+                        </p>
+                        <button class="btn btn-orange mt-2 w-100" type="button">Learn more</button>
+                    </article>
+
+                    <!-- COO -->
+                    <article class="col text-center" role="group" aria-label="COO - Danielle Kim">
+                        <picture>
+                            <source srcset="images/coo-small.jpg 480w, images/coo.jpg 800w"
+                                sizes="(max-width: 576px) 100vw, 33vw" />
+                            <img src="images/coo.jpg" alt="Portrait of Danielle Kim, COO"
+                                class="img-fluid lady-img rounded" />
+                        </picture>
+                        <h3 class="mt-2">COO</h3>
+                        <p class="lady-bio mt-2 text-start d-none d-md-block">
+                            The heartbeat of operations, ensuring every rescue is smooth and successful.
+                        </p>
+                        <button class="btn btn-orange mt-2 w-100" type="button">Learn more</button>
+                    </article>
+
+                    <!-- CFO -->
+                    <article class="col text-center" role="group" aria-label="CFO - Rachel Singh">
+                        <picture>
+                            <source srcset="images/cfo-small.jpg 480w, images/cfo.jpg 800w"
+                                sizes="(max-width: 576px) 100vw, 33vw" />
+                            <img src="images/cfo.jpg" alt="Portrait of Rachel Singh, CFO"
+                                class="img-fluid lady-img rounded" />
+                        </picture>
+                        <h3 class="mt-2">CFO</h3>
+                        <p class="lady-bio mt-2 text-start d-none d-md-block">
+                            Balancing budgets with empathy — turning donations into second chances.
+                        </p>
+                        <button class="btn btn-orange mt-2 w-100" type="button">Learn more</button>
+                    </article>
+
+                </div>
             </div>
 
-            <!-- COO -->
-            <div class="col text-center">
-                <img src="images/coo.jpg" class="img-fluid lady-img" alt="COO">
-                <p class="mb-1">COO</p>
-                <p class="lady-bio mt-2 d-none d-md-block" style="text-align: left;">
-                    The heartbeat of operations, ensuring every rescue is smooth and successful.
-                </p>
-                <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn more</button>
+            <!-- Desktop -->
+            <div class="d-none d-lg-block">
+                <div class="row g-4 align-items-center">
 
+                    <!-- CEO Image -->
+                    <div class="col-lg-3 text-center">
+                        <picture>
+                            <source srcset="images/ceo.jpg 400w, images/ceo-large.jpg 800w"
+                                sizes="(min-width: 992px) 200px" />
+                            <img src="images/ceo-large.jpg" alt="Portrait of Maya Thompson, CEO"
+                                class="img-fluid lady-img rounded" />
+                        </picture>
+                    </div>
+                    <!-- CEO Text -->
+                    <article class="col-lg-3">
+                        <h3>CEO - Maya Thompson</h3>
+                        <p class="lady-bio">
+                            Maya Thompson brings over a decade of animal welfare leadership to Pawprints Rescue.
+                            Her passion for giving every dog a second chance fuels the organization’s mission and
+                            vision.
+                            Under her guidance, Pawprints has grown into a trusted name in the rescue community.
+                            Maya believes every tail deserves to wag with hope—and she works tirelessly to make it
+                            happen.
+                        </p>
+                        <button class="btn btn-orange" type="button">Contact</button>
+                    </article>
+
+                    <!-- CFO Image -->
+                    <div class="col-lg-3 text-center">
+                        <picture>
+                            <source srcset="images/cfo.jpg 400w, images/cfo-large.jpg 800w"
+                                sizes="(min-width: 992px) 200px" />
+                            <img src="images/cfo-large.jpg" alt="Portrait of Rachel Singh, CFO"
+                                class="img-fluid lady-img rounded" />
+                        </picture>
+                    </div>
+                    <!-- CFO Text -->
+                    <article class="col-lg-3">
+                        <h3>CFO - Rachel Singh</h3>
+                        <p class="lady-bio">
+                            With a background in Non-Profit Finance and a soft spot for senior dogs,
+                            Rachel Singh ensures every donation is maximized to support medical care, food, and shelter.
+                            Her financial strategies keep Pawprints thriving while staying true to its grassroots
+                            mission.
+                            She’s the reason we can say, ”Every penny has a paw print.”
+                        </p>
+                        <button class="btn btn-orange" type="button">Contact</button>
+                    </article>
+
+                    <!-- COO Text -->
+                    <article class="col-lg-3 order-lg-5">
+                        <h3>COO - Danielle Kim</h3>
+                        <p class="lady-bio">
+                            Danielle Kim oversees daily operations with a heart full of compassion and a schedule full
+                            of dog walks.
+                            From intake to adoption follow-ups, she makes sure the team runs like an oil-wheeled leash.
+                            Her calm leadership and hands-on approach help every rescue feel safe, cared for, and loved
+                            on the path to their forever homes.
+                        </p>
+                        <button class="btn btn-orange" type="button">Contact</button>
+                    </article>
+                    <!-- COO Image -->
+                    <div class="col-lg-3 order-lg-4 text-center">
+                        <picture>
+                            <source srcset="images/coo.jpg 400w, images/coo-large.jpg 800w"
+                                sizes="(min-width: 992px) 200px" />
+                            <img src="images/coo-large.jpg" alt="Portrait of Danielle Kim, COO"
+                                class="img-fluid lady-img rounded" />
+                        </picture>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Pawrents Section -->
+        <section aria-labelledby="pawrents-title" class="container my-5">
+            <h2 id="pawrents-title" class="text-center mb-4">Our Pawrents – Rescues Who Raised the Pack</h2>
+
+            <!-- Mobile -->
+            <div class="d-md-none px-3 text-center">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-4">
+                        <picture>
+                            <source srcset="images/heart-small.jpeg 480w, images/heart.jpeg 800w"
+                                sizes="(max-width: 576px) 100vw" />
+                            <img src="images/heart.jpeg" alt="Dog hand heart symbol" class="img-fluid"
+                                style="max-height: 150px;" />
+                        </picture>
+                    </div>
+                    <div class="col-8 text-start">
+                        <p class="small mb-2">
+                            Meet the incredible humans whose love and care helped shape our rescued dogs into loyal
+                            companions they are today.
+                        </p>
+                        <button class="btn btn-orange mt-1 w-100" type="button">Learn more</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- CFO -->
-            <div class="col text-center">
-                <img src="images/cfo.jpg" class="img-fluid lady-img" alt="CFO">
-                <p class="mb-1">CFO</p>
-                <p class="lady-bio mt-2 d-none d-md-block" style="text-align: left;">
-                    Balancing budgets with empathy — turning donations into second chances.
-                </p>
-                <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn more</button>
+            <!-- Tablet+ -->
+            <div class="d-none d-md-block">
+                <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
 
+                    <article class="col text-center" aria-label="Pawrent 1 – Linda Reyes">
+                        <picture>
+                            <source srcset="images/pawrent1-small.jpg 480w, images/pawrent1.jpg 800w"
+                                sizes="(max-width: 768px) 100vw, 33vw" />
+                            <img src="images/pawrent1.jpg" alt="Portrait of Linda Reyes"
+                                class="img-fluid lady-img pawrent-img rounded" />
+                        </picture>
+                        <h3 class="mt-2">Pawrent 1 – Linda Reyes</h3>
+                        <p class="lady-bio text-start">
+                            Linda has been with Pawprints Rescue since day one, offering comfort and consistency to
+                            every dog that comes through our doors.
+                            Her calm, nurturing energy helps scared or anxious pups feel safe, seen, and loved.
+                            From bottle-feeding litters to training timid rescues, Linda has raised more wagging tails
+                            than we can count — each one remembers her gentle touch.
+                        </p>
+                        <button class="btn btn-orange mt-2 w-100" type="button">Learn more</button>
+                    </article>
+
+                    <article class="col text-center" aria-label="Pawrent 2 – Marcus Benette">
+                        <picture>
+                            <source srcset="images/pawrent2-small.jpg 480w, images/pawrent2.jpg 800w"
+                                sizes="(max-width: 768px) 100vw, 33vw" />
+                            <img src="images/pawrent2.jpg" alt="Portrait of Marcus Benette"
+                                class="img-fluid lady-img pawrent-img rounded" />
+                        </picture>
+                        <h3 class="mt-2">Pawrent 2 – Marcus Benette</h3>
+                        <p class="lady-bio text-start">
+                            Marcus brings a quiet strength to our rescue family. Known for his early morning walks and
+                            weekend play sessions,
+                            he’s helped countless dogs learn to trust again. His patience and sense of humor bring out
+                            each dog’s personality,
+                            and his bond with the tougher cases is nothing short of magical. Around here, he’s not just
+                            a foster — he’s dog dad of the year.
+                        </p>
+                        <button class="btn btn-orange mt-2 w-100" type="button">Learn more</button>
+                    </article>
+
+                    <article class="col text-center" aria-label="Pawrent 3 – Ethan Brooke">
+                        <picture>
+                            <source srcset="images/pawrent3-small.jpg 480w, images/pawrent3.jpg 800w"
+                                sizes="(max-width: 768px) 100vw, 33vw" />
+                            <img src="images/pawrent3.jpg" alt="Portrait of Ethan Brooke"
+                                class="img-fluid lady-img pawrent-img rounded" />
+                        </picture>
+                        <h3 class="mt-2">Pawrent 3 – Ethan Brooke</h3>
+                        <p class="lady-bio text-start">
+                            Ethan’s dedication goes beyond the basics — he’s part trainer, part therapist, and a
+                            full-time friend to every rescue he meets.
+                            Whether helping with socialization or just sitting beside a shy dog in silence, Ethan’s
+                            presence builds confidence and connection.
+                            His belief that “every dog is already perfect” continues to shape how we care for our pack.
+                        </p>
+                        <button class="btn btn-orange mt-2 w-100" type="button">Learn more</button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Operate Section -->
+        <section aria-labelledby="how-we-operate-title" class="container my-5">
+            <h2 id="how-we-operate-title" class="text-center mb-4">How We Operate?</h2>
+
+            <!-- Mobile -->
+            <div class="d-md-none text-center px-3 mb-4">
+                <div class="d-flex justify-content-center flex-wrap gap-2">
+                    <button class="btn btn-orange" type="button">Process</button>
+                    <button class="btn btn-orange" type="button">BTS</button>
+                    <button class="btn btn-orange" type="button">Health</button>
+                    <button class="btn btn-orange" type="button">Funds</button>
+                </div>
             </div>
 
-        </div>
-    </div>
+            <!-- Tablet and up -->
+            <div class="row d-none d-md-flex px-3">
 
-    <!-- lady lead section for desktop version only -->
-    <!-- Desktop Only: 4 Columns with alternating image-text -->
-    <div class="text-center mt-3 d-none d-lg-block"> <!-- desktop only, lg and up -->
-        <h5>OUR AMAZING LADY LEADS</h5>
-        <div class="row g-3">
+                <div class="col-md-9 how-we-operate-wrapper px-3 py-4 h-100">
+                    <div class="row g-3 mt-3">
 
-            <!-- Row 1 -->
-            <!-- 1: Image CEO -->
-            <div class="col-lg-3 text-center">
-                <img src="images/ceo.jpg" class="img-fluid lady-img" alt="CEO">
-            </div>
-            <!-- 2: Text CEO -->
-            <div class="col-lg-3 d-flex flex-column justify-content-center text-start">
-                <p class="mb-1"><strong>CEO- Maya Thompson</strong></p>
-                <p class="lady-bio">
-                    Maya Thompson brings over a decade of animal welfare
-                    leadership to Pawsprint Rescue. Her passion for giving
-                    every dog a second chance fuels the organization’s
-                    mission and vison. Under her guidance, Pawsprint has
-                    grown into a trusted name in the rescue community.
-                    Maya believes every tail deserves to wag with hope- and
-                    she works tirelessly to make it happen.
-                </p>
-                <button class="btn btn-orange mt-1">Contact</button>
-            </div>
+                        <article class="col-6">
+                            <div class="operate-box special-bg text-white h-100">
+                                <h3>Process</h3>
+                                <p>
+                                    Every rescue journey starts with a call for help. We assess each dog’s needs and
+                                    bring them into a safe, welcoming environment. From intake and medical checks to
+                                    training and adoption matching, each step is handled with care.
+                                </p>
+                                <button class="btn btn-orange mt-2" type="button">Learn more</button>
+                            </div>
+                        </article>
 
-            <div class="col-lg-3 text-center">
-                <img src="images/ceo.jpg" class="img-fluid lady-img" alt="CEO">
-            </div>
-            <!-- 2: Text CFO -->
-            <div class="col-lg-3 d-flex flex-column justify-content-center text-start">
-                <p class="mb-1"><strong>CFO- Rachel Singh</strong></p>
-                <p class="lady-bio">
-                    With a background in Non Profit Finance and a soft spot
-                    for senior dogs, Rachel Singh ensures every donation is
-                    maximized to support medical care, food, and shelter.
-                    Her financial strategies keep Pawsprint thriving while
-                    staying true to its grass roots mission. She’s the reason
-                    we can say, ”Every penny has a pa print”.
-                </p>
-                <button class="btn btn-orange mt-1">Contact</button>
-            </div>
+                        <article class="col-6">
+                            <div class="operate-box default-bg h-100">
+                                <h3>BTS</h3>
+                                <p>
+                                    Our team is small but mighty — volunteers, fosters, and dog lovers working around
+                                    the clock. From early-morning feedings to late-night vet runs, we handle each moment
+                                    with dedication.
+                                </p>
+                                <button class="btn btn-orange mt-2" type="button">Learn more</button>
+                            </div>
+                        </article>
 
-            <!-- Row 2 -->
-            <!-- 5: Text COO -->
-            <div class="col-lg-3 d-flex flex-column justify-content-center text-start">
-                <p class="mb-1"><strong>COO- Danielle Kim</strong></p>
-                <p class="lady-bio">
-                    Danielle Kim oversees daily operations with a heart full
-                    of compassion and a schedule full of dog walks. From
-                    intake to adoption follow-ups, she makes sure the team
-                    runs like a oil-wheeled leash. Her calm leadership and
-                    hands-on approach help every rescue feel safe, cared
-                    for and loved on the path to their forever homes.
-                </p>
-                <button class="btn btn-orange mt-1">Contact</button>
-            </div>
-            <!-- 6: Image Stakeholder -->
-            <div class="col-lg-3 text-center">
-                <img src="images/cfo.jpg" class="img-fluid lady-img" alt="CFO">
-            </div>
-            <!-- 5: Text Stakeholder -->
-            <div class="col-lg-3 d-flex flex-column justify-content-center text-start">
-                <p class="mb-1"><strong>Stakeholder- Olivia M</strong></p>
-                <p class="lady-bio">
-                    Olivia Martinez has been with Paswprint since its
-                    earliest days, turning her love for dogs into lasting
-                    impact. As major supporter and strategic advisor, she
-                    helps shape the long-ter, gaols while staying actively
-                    involved in community outreach. Her vison: a world
-                    where no dog is left behind- and she’s helping us build
-                    it every day.
-                </p>
-                <button class="btn btn-orange mt-1">Contact</button>
-            </div>
-            <!-- 6: Image CFO -->
-            <div class="col-lg-3 text-center">
-                <img src="images/cfo.jpg" class="img-fluid lady-img" alt="CFO">
-            </div>
+                        <article class="col-6">
+                            <div class="operate-box default-bg h-100">
+                                <h3>Health</h3>
+                                <p>
+                                    Each dog receives full medical care: checkups, vaccinations, and treatments. We also
+                                    provide behavior evaluations and training so every pup is adoption-ready.
+                                </p>
+                                <button class="btn btn-orange mt-2" type="button">Learn more</button>
+                            </div>
+                        </article>
 
-        </div>
-    </div>
+                        <article class="col-6">
+                            <div class="operate-box special-bg text-white h-100">
+                                <h3>Funds</h3>
+                                <p>
+                                    Transparency matters. Every donation supports vet bills, food, grooming, training
+                                    supplies, transportation, and adoption outreach programs.
+                                </p>
+                                <button class="btn btn-orange mt-2" type="button">Learn more</button>
+                            </div>
+                        </article>
 
-
-    <!-- end -->
-
-
-    <!-- Mobile Pawrents Section (shows only on xs and sm) -->
-    <div class="text-center mt-4 px-3 d-block d-md-none">
-        <h6><strong>Our Pawrents – Rescues who raised the pack</strong></h6>
-
-        <div class="row justify-content-center align-items-center">
-            <!-- Image Column -->
-            <div class="col-4 col-md-3">
-                <img src="images/heart.jpeg" class="img-fluid" style="max-height: 150px;" alt="Dog Hand">
-            </div>
-
-            <!-- Text and Button Column -->
-            <div class="col-8 col-md-6 text-start">
-                <p class="small mb-2">
-                    Meet the incredible humans whose
-                    love and care helped shape our
-                    rescued dogs into loyal companions
-                    they are today.
-                </p>
-                <button class="btn btn-orange mt-1 btn-left">Learn more</button>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Tablet Pawrents Section (shows only on md and larger) -->
-    <div class="text-center mt-3 d-none d-md-block">
-        <h5>OUR PAWRENTS – RESCUED WHO RAISED THE PACK</h5>
-
-        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
-
-            <!-- Pawrent 1 -->
-            <div class="col text-center">
-                <img src="images/pawrent1.jpg" class="img-fluid lady-img pawrent-img" alt="Pawrent 1 - Linda Reyes">
-                <p class="mb-1"><strong>PAWRENT 1 – Linda Reyes</strong></p>
-                <p class="lady-bio text-start">
-                    Linda has been with Pawprints Rescue since day one, offering comfort and consistency to every dog
-                    that comes through our doors.
-                    Her calm, nurturing energy helps scared or anxious pups feel safe, seen, and loved. From
-                    bottle-feeding litters to training timid rescues,
-                    Linda has raised more wagging tails than we can count — each one remembers her gentle touch.
-                </p>
-                <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn more</button>
-
-            </div>
-
-            <!-- Pawrent 2 -->
-            <div class="col text-center">
-                <img src="images/pawrent2.jpg" class="img-fluid lady-img pawrent-img" alt="Pawrent 2 - Marcus Benette">
-                <p class="mb-1"><strong>PAWRENT 2 – Marcus Benette</strong></p>
-                <p class="lady-bio text-start">
-                    Marcus brings a quiet strength to our rescue family. Known for his early morning walks and weekend
-                    play sessions,
-                    he’s helped countless dogs learn to trust again. His patience and sense of humor bring out each
-                    dog’s personality,
-                    and his bond with the tougher cases is nothing short of magical. Around here, he’s not just a foster
-                    — he’s dog dad of the year.
-                </p>
-                <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn more</button>
-
-            </div>
-
-            <!-- Pawrent 3 -->
-            <div class="col text-center">
-                <img src="images/pawrent3.jpg" class="img-fluid lady-img pawrent-img" alt="Pawrent 3 - Ethan Brooke">
-                <p class="mb-1"><strong>PAWRENT 3 – Ethan Brooke</strong></p>
-                <p class="lady-bio text-start">
-                    Ethan’s dedication goes beyond the basics — he’s part trainer, part therapist, and a full-time
-                    friend to every rescue he meets.
-                    Whether helping with socialization or just sitting beside a shy dog in silence, Ethan’s presence
-                    builds confidence and connection.
-                    His belief that “every dog is already perfect” continues to shape how we care for our pack.
-                </p>
-                <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn more</button>
-
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- How we Operate for mobile only -->
-    <div class="text-center mt-4 d-md-none">
-        <h6><strong>How we Operate?</strong></h6>
-        <div class="d-flex justify-content-center flex-wrap gap-2 mt-2 px-3">
-            <button class="btn btn-orange">Process</button>
-            <button class="btn btn-orange">BTS</button>
-            <button class="btn btn-orange">Health</button>
-            <button class="btn btn-orange">Funds</button>
-        </div>
-    </div>
-
-
-    <!-- for tablet only   -->
-
-    <!-- Tablet-Only: How We Operate Section -->
-    <!-- Tablet Only: Two Column Layout -->
-    <div class="row d-none d-md-flex px-3 mt-4">
-
-        <!-- LEFT: How We Operate -->
-        <div class="col-md-9 how-we-operate-wrapper px-3 py-4 h-100">
-            <h6 class="text-center"><strong>How we Operate?</strong></h6>
-            <div class="row g-3 mt-3">
-
-                <!-- 1: Process -->
-                <div class="col-6">
-                    <div class="operate-box special-bg text-white h-100">
-                        <div class="text-start">
-                            <h6 class="mb-2"><strong>Process</strong></h6>
-                            <p class="mb-0 small">
-                                Every rescue journey starts with a call for help. We assess each dog’s needs and
-                                bring them into a safe, welcoming environment. From intake and medical checks to
-                                training and adoption matching, each step is handled with care.
-                            </p>
-                            <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn
-                                more</button>
-                        </div>
                     </div>
                 </div>
 
-                <!-- 2: BTS -->
-                <div class="col-6">
-                    <div class="operate-box default-bg h-100">
-                        <div class="text-start">
-                            <h6 class="mb-2"><strong>BTS</strong></h6>
-                            <p class="mb-0 small">
-                                Our team is small but mighty — volunteers, fosters, and dog lovers working around
-                                the clock. From early-morning feedings to late-night vet runs, we handle each moment
-                                with dedication.
-                            </p>
-                            <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn
-                                more</button>
-                        </div>
+                <aside class="col-md-3 d-flex flex-column shelter-location-wrapper"
+                    aria-label="Shelter Location and Submit">
+
+                    <header class="mb-3 text-center">
+                        <h3>Shelter Location</h3>
+                        <h4>Headquartered in Ottawa, Ontario</h4>
+                    </header>
+
+                    <div class="d-flex justify-content-between shelter-images-container mb-3" role="list">
+                        <img src="images/location1.jpeg" alt="Shelter Location 1 in Ottawa" height="150"
+                            style="object-fit: cover; width: 32%; border-radius: 8px;" role="listitem" />
+                        <img src="images/location2.jpeg" alt="Shelter Location 2 in Ottawa" height="150"
+                            style="object-fit: cover; width: 32%; border-radius: 8px;" role="listitem" />
+                        <img src="images/location3.jpeg" alt="Shelter Location 3 in Ottawa" height="150"
+                            style="object-fit: cover; width: 32%; border-radius: 8px;" role="listitem" />
                     </div>
-                </div>
 
-                <!-- 3: Health -->
-                <div class="col-6">
-                    <div class="operate-box default-bg h-100">
-                        <div class="text-start">
-                            <h6 class="mb-2"><strong>Health</strong></h6>
-                            <p class="mb-0 small">
-                                Each dog receives full medical care: checkups, vaccinations, and treatments. We also
-                                provide behavior evaluations and training so every pup is adoption-ready.
-                            </p>
-                            <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn
-                                more</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4: Funds -->
-                <div class="col-6">
-                    <div class="operate-box special-bg text-white h-100">
-                        <div class="text-start">
-                            <h6 class="mb-2"><strong>Funds</strong></h6>
-                            <p class="mb-0 small">
-                                Transparency matters. Every donation supports vet bills, food, grooming, training
-                                supplies, transportation, and adoption outreach programs.
-                            </p>
-                            <button class="btn btn-orange mt-1" style="display: block; margin-left: 0;">Learn
-                                more</button>
-                        </div>
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-primary mt-auto">Submit</button>
+                </aside>
 
             </div>
-        </div>
+        </section>
 
-        <!-- Flex container for horizontal stacking -->
-        <!-- RIGHT: Shelter Location -->
-        <div class="col-md-3 d-flex flex-column shelter-location-wrapper">
+        <!-- More About Shelter -->
+        <section aria-labelledby="more-about-shelter-title" class="container my-5">
 
-            <!-- Headings above images -->
-            <div class="mb-3 text-center">
-                <h4>Shelter Location</h4>
-                <h5>Headquartered in Ottawa, Ontario</h5>
+            <h2 id="more-about-shelter-title" class="text-center mb-4">More About Our Shelter</h2>
+
+            <!-- Mobile -->
+            <div class="d-md-none px-3 text-center mb-4">
+                <button class="info-btn mb-2 w-100" type="button">Click here to read about our shelter’s SUCCESS
+                    STORIES</button>
+                <button class="info-btn mb-2 w-100" type="button">Click here to read about our shelter’s CHARITY
+                    events</button>
+                <button class="info-btn mb-2 w-100" type="button">Click here to read about our shelter’s STATS</button>
+                <button class="info-btn w-100" type="button">Click here to read about our shelter’s GALLERY</button>
             </div>
 
-            <!-- Flex container for horizontal stacking images -->
-            <div class="d-flex justify-content-between shelter-images-container mb-3">
-                <img src="images/location1.jpeg" alt="Location 1" height="150"
-                    style="object-fit: cover; width: 32%; border-radius: 8px;">
-                <img src="images/location2.jpeg" alt="Location 2" height="150"
-                    style="object-fit: cover; width: 32%; border-radius: 8px;">
-                <img src="images/location3.jpeg" alt="Location 3" height="150"
-                    style="object-fit: cover; width: 32%; border-radius: 8px;">
+            <!-- Tablet and up -->
+            <div class="row d-none d-md-flex justify-content-center">
+                <button class="info-btn col-6 col-md-3 m-2" type="button">Success Stories</button>
+                <button class="info-btn col-6 col-md-3 m-2" type="button">Charity Events</button>
+                <button class="info-btn col-6 col-md-3 m-2" type="button">Stats</button>
+                <button class="info-btn col-6 col-md-3 m-2" type="button">Gallery</button>
             </div>
 
-            <!-- Submit Button below images -->
-            <button type="submit" class="btn btn-primary mt-auto">Submit</button>
-        </div>
+        </section>
 
-
-    </div>
-    <!-- end -->
-
-    <!-- More about our Shelter -->
-    <!-- Mobile Version: visible only on xs and sm -->
-    <div class="text-center mt-4 px-3 d-block d-md-none">
-        <h6><strong>More about our Shelter</strong></h6>
-        <div class="mt-2">
-            <button class="info-btn mb-2">Click here to read about our shelter’s SUCCESS STORIES</button>
-            <button class="info-btn mb-2">Click here to read about our shelter’s MISSION</button>
-            <button class="info-btn mb-2">Click here to read about our shelter’s VISION</button>
-            <button class="info-btn mb-2">Click here to read about our shelter’s STORY</button>
-        </div>
-    </div>
-
-    <!-- Tablet Version: visible only on md and up -->
-    <!-- Tablet Brand Statements Section (shows only on md and larger) -->
-    <div class="text-center mt-4 px-3 d-none d-md-block">
-        <h5>MORE ABOUT OUR SHELTER</h5>
-
-        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
-
-            <!-- MISSION -->
-            <div class="col text-center">
-                <img src="images/mission.png" class="img-fluid lady-img brand-img" alt="Mission">
-                <p class="lady-bio text-start mt-2">
-                    Our mission is to rescue, rehabilitate, and rehome animals in need, ensuring every paw has a
-                    chance
-                    at love and safety.
-                    We work tirelessly to create a future where no animal is left behind.
-                </p>
-            </div>
-
-            <!-- VISION -->
-            <div class="col text-center">
-                <img src="images/vision.png" class="img-fluid lady-img brand-img" alt="Vision">
-                <p class="lady-bio text-start mt-2">
-                    Our vision is a world where compassion guides every action, and every animal is valued.
-                    Through education, outreach, and advocacy, we strive for a future of kindness and care.
-                </p>
-            </div>
-
-            <!-- STORY -->
-            <div class="col text-center">
-                <img src="images/story.png" class="img-fluid lady-img brand-img" alt="Story">
-                <p class="lady-bio text-start mt-2">
-                    From humble beginnings to countless tail wags, our story is built on hope, dedication, and
-                    community.
-                    Each rescue, each home, each happy ending — it’s all part of our journey.
-                </p>
-            </div>
-
-        </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class=" pt-4 pb-3 px-3">
+    <footer role="contentinfo" class="pt-4 pb-3 px-3 bg-light mt-5">
         <div class="container">
             <div class="row text-center text-md-start">
-                <div class="col-4">
-                    <h5>PAWPRINTS RESCUE</h5>
-                    <p>Charitable Registration Number:<br>4963303IIXC3I02<br>© 2025<br>ALL RIGHTS RESERVED.
-                    </p>
-                </div>
-                <div class="col-4">
+                <section class="col-4" aria-label="Organization Information">
+                    <h5>Pawprints Rescue</h5>
+                    <address>
+                        Charitable Registration Number:<br />
+                        4963303IIXC3I02<br />
+                        &copy; 2025 All rights reserved.
+                    </address>
+                </section>
+                <nav class="col-4" aria-label="Quick Links">
                     <h5>Quick Links</h5>
-                    <a href="#">Contact Us</a><br>
-                    <a href="#">About Us</a><br>
-                    <a href="#">Privacy Policy</a>
-                </div>
-                <div class="col-4">
-                    <h5>SOCIAL MEDIA</h5>
-                    <a href="#">Instagram</a><br>
-                    <a href="#">Facebook</a><br>
-                    <a href="#">YouTube</a>
-                </div>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <nav class="col-4" aria-label="Social Media Links">
+                    <h5>Social Media</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
