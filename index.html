@@ -14,7 +14,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-warning px-3">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="images/paws.png" alt="paws" class="rounded-circle me-2" width="40" height="40">
+                    <img src="images/logo.png" alt="paws" class="rounded-circle me-2" width="40" height="40">
                     <div class="ms-auto d-flex align-items-center">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <span class="fs-5">🔍</span>
@@ -40,66 +40,241 @@
         </nav>
 
         <div class="text-center mt-4">
-            <img src="images/hero.png">
-
+            <img src="images/hero.png" alt="Hero Image">
         </div>
 
         <div class="container">
             <div class="highlight-box text-center">Find your paw friend today!</div>
 
-            <div class="text-center">
-                <img src="https://i.imgur.com/mvXzhtm.jpeg" class="img-fluid rounded" alt="Dog Circle">
+            <div class="d-flex align-items-center justify-content-center gap-4 my-3 d-md-none">
+                <div style="max-width: 250px;">
+                    <img src="images/dogs-in-heart-shape.jpg" class="img-fluid rounded" alt="Dog Circle"
+                        style="width: 100%;">
+                </div>
+                <div class="main-buttons text-center">
+                    <button class="btn btn-lg d-block mb-2">ADOPT</button>
+                    <button class="btn btn-lg d-block mb-2">VOLUNTEER</button>
+                    <button class="btn btn-lg d-block">DONATE</button>
+                </div>
             </div>
 
-            <div class="main-buttons text-center my-3">
-                <button class="btn btn-lg d-block w-50 mx-auto">ADOPT</button>
-                <button class="btn btn-lg d-block w-50 mx-auto">VOLUNTEER</button>
-                <button class="btn btn-lg d-block w-50 mx-auto">DONATE</button>
+            <!-- for desktop version -->
+
+            <div class="d-none d-lg-flex justify-content-center gap-4 my-5">
+                <!-- ADOPT Column -->
+                <div class="d-flex flex-column text-start" style="max-width: 300px;">
+                    <button class="btn btn-lg btn-outline-primary mb-3 w-100">ADOPT</button>
+                    <p>“Ready to find your friend forever?”</p>
+                    <p>
+                        Every dog here has a story — and they’re all waiting for a second chance at love.
+                        At Pawsprint Rescue, we connect loving families with dogs in need of a forever home.
+                        Browse our adaptable dogs and find your perfect match.
+                    </p>
+                    <button class="btn btn-primary mt-2 align-self-start">Meet Our Dogs</button>
+                </div>
+
+                <!-- DONATE Column -->
+                <div class="d-flex flex-column text-start" style="max-width: 300px;">
+                    <button class="btn btn-lg btn-outline-primary mb-3 w-100">DONATE</button>
+                    <p>Support their second chance</p>
+                    <p>
+                        Your donations help provide food, shelter, medical care, and love to dogs in need.
+                        Even a small gift can change a life forever.
+                        Help us give every pup the future they deserve — one tail wag at a time.
+                    </p>
+                    <button class="btn btn-primary mt-2 align-self-start">Make a Donation</button>
+                </div>
+
+                <!-- VOLUNTEER Column -->
+                <div class="d-flex flex-column text-start" style="max-width: 300px;">
+                    <button class="btn btn-lg btn-outline-primary mb-3 w-100">VOLUNTEER</button>
+                    <p>Be the reason a tail wags today.</p>
+                    <p>
+                        Join our pack of passionate volunteers and help us care for, walk, and socialize our rescued
+                        dogs.
+                        Your time and heart can make a world of difference.
+                        Whether it’s an hour a week or more — every helping hand matters.
+                    </p>
+                    <button class="btn btn-primary mt-2 align-self-start">Be a Volunteer</button>
+                </div>
             </div>
+
+            <!-- end of desktop -->
+
+            <!-- for tablet and mobile section 2 -->
+
+            <div class="d-flex flex-column align-items-center gap-3 my-3 d-none d-md-flex d-lg-none">
+
+                <div class="main-buttons text-center w-100">
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row">
+
+                        <img src="images/adopt.png" class="d-none d-md-block ms-5" style="width: 275px; height: 300px;"
+                            alt="Adopt Icon">
+
+                        <div class="main-buttons text-start">
+                            <!-- ADOPT button with border only -->
+                            <button class="btn btn-lg btn-outline-primary mb-2 w-100">ADOPT</button>
+
+                            <!-- Paragraph below the ADOPT button -->
+                            <p>“Ready to find your friend forever?”</p>
+
+                            <p>Every dog here has a story- and they’re all waiting for a second chance at
+                                love. At Pawsprint Rescue, we connect loving families with dogs in need of
+                                a forever home.
+
+                                Browse our adaptable dogs and find your perfect match.</p>
+
+                            <!-- Meet Our Dogs button -->
+                            <div class="text-start">
+                                <button class="btn btn-primary mt-2">Meet Our Dogs</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row">
+                        <img src="images/donate.png" class="d-none d-md-block ms-5" style="width: 275px; height: 300px;"
+                            alt="Volunteer Icon">
+
+
+                        <div class="main-buttons text-start">
+                            <!-- Volunteer button with border only -->
+                            <button class="btn btn-lg btn-outline-primary mb-2 w-100">DONATE</button>
+
+                            <P>Support their second chance</P>
+
+                            <p>Your donations help provide food, shelter, medical care, and love to dogs
+                                in need. Even a small gift can change a life forever.
+
+                                Help us give every pup the future they deserve — one tail wag at a time.</p>
+                            <div class="text-start">
+                                <button class="btn btn-primary mt-2">Be a Volunteer</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-2 flex-column flex-md-row">
+                        <img src="images/volunteer.png" class="d-none d-md-block ms-5"
+                            style="width: 275px; height: 300px;" alt="Volunteer Icon">
+
+
+                        <div class="main-buttons text-start">
+                            <!-- Volunteer button with border only -->
+                            <button class="btn btn-lg btn-outline-primary mb-2 w-100">VOLUNTEER</button>
+
+                            <P>Be the reason a Tail wags today.</P>
+
+                            <p>Join our pack of passionate volunteers and help us care for, walk, and
+                                socialize our rescued dogs.
+
+                                Your time and heart can make a world of difference.
+
+                                Whether it’s an hour a week or more- every hour helping hand matters.</p>
+                            <div class="text-start">
+                                <button class="btn btn-primary mt-2">Be a Volunteer</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end of section 2 -->
+
+            <!-- featured animals for mobile and tablet version -->
 
             <div class="text-center">
                 <h3>Featured animals!</h3>
-                <div class="d-flex justify-content-center flex-wrap gap-2">
-                    <img src="https://i.imgur.com/Yv3hMd0.jpeg" class="rounded" width="60" height="60" alt="Dog1">
-                    <img src="https://i.imgur.com/avT9V3Y.jpeg" class="rounded" width="60" height="60" alt="Dog2">
-                    <img src="https://i.imgur.com/4pKLxKw.jpeg" class="rounded" width="60" height="60" alt="Dog3">
-                    <img src="https://i.imgur.com/Z8FoRzK.jpeg" class="rounded" width="60" height="60" alt="Dog4">
+                <div class="featured-images">
+                    <div class="featured-image-wrapper">
+                        <img src="images/one.jpeg" alt="Dog1" />
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                    <div class="featured-image-wrapper">
+                        <img src="images/two.jpg" alt="Dog2" />
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                    <div class="featured-image-wrapper">
+                        <img src="images/three.jpeg" alt="Dog3" />
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                    <div class="featured-image-wrapper">
+                        <img src="images/four.png" alt="Dog4" />
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="news-buttons text-center my-4">
+            <!-- end -->
+
+            <!-- for mobile only -->
+
+            <div class="text-center my-4">
                 <h3>Events and news</h3>
-                <button class="btn mx-1">See More</button>
-                <button class="btn mx-1">See More</button>
-                <button class="btn mx-1">See More</button>
             </div>
-        </div>
 
-        <footer class="pt-4 pb-3 px-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h5>PAWPRINTS RESCUE</h5>
-                        <p>Charitable Registration Number:<br>4963303IIXC3I02<br>© 2025<br>ALL RIGHTS RESERVED.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Quick Links</h5>
-                        <a href="#">Contact Us</a><br>
-                        <a href="#">About Us</a><br>
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>SOCIAL MEDIA</h5>
-                        <a href="#">Instagram</a><br>
-                        <a href="#">Facebook</a><br>
-                        <a href="#">YouTube</a>
-                    </div>
+            <div class="news-buttons text-center my-4 d-block d-md-none">
+
+                <div class="d-flex justify-content-center w-100 gap-3 flex-nowrap">
+                    <button class="btn flex-grow-1">See More</button>
+                    <button class="btn flex-grow-1">See More</button>
+                    <button class="btn flex-grow-1">See More</button>
                 </div>
             </div>
-        </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </div>
+            <!-- end of mobile only -->
+
+            <!-- news for tablet and desktop -->
+            <div class="d-none d-md-flex align-items-center justify-content-center events-flex-container mb-4">
+                <img src="images/event1.png" alt="Event Image" class="img-fluid" style="max-width: 250px;">
+                <div class="text-start">
+                    <p>“New leash on life: 12 Dogs adopted in June!”</p>
+                    <p>We’re thrilled to announce that 12 of our rescued pups found their forever homes this month. From
+                        shy seniors to bouncy puppies, each adoption is a step closer to our mission. Thank you to all
+                        the amazing families who opened their hearts and homes.</p>
+                </div>
+            </div>
+
+            <div
+                class="d-none d-md-flex flex-row-reverse align-items-center justify-content-center events-flex-container2 mb-4">
+                <img src="images/event2.png" alt="Event Image" class="img-fluid" style="max-width: 250px;">
+                <div class="text-start"">
+                    <p>“Pawpalooza 2025: Community Event raises $5000+”</p>
+                    <p>Our annual Pawplooza was a tail wagging success! With local vendors, dog games and live music, we
+                        raised over $5000 to support vet care and supplies for our rescues. Huge thanks to our
+                        volunteers, donors, and the amazing turnout from the community.</p>
+                </div>
+            </div>
+
+            <!-- end -->
+
+            <footer class=" pt-4 pb-3 px-3">
+                    <div class="container">
+                        <div class="row text-center text-md-start">
+                            <div class="col-4">
+                                <h5>PAWPRINTS RESCUE</h5>
+                                <p>Charitable Registration Number:<br>4963303IIXC3I02<br>© 2025<br>ALL RIGHTS RESERVED.
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <h5>Quick Links</h5>
+                                <a href="#">Contact Us</a><br>
+                                <a href="#">About Us</a><br>
+                                <a href="#">Privacy Policy</a>
+                            </div>
+                            <div class="col-4">
+                                <h5>SOCIAL MEDIA</h5>
+                                <a href="#">Instagram</a><br>
+                                <a href="#">Facebook</a><br>
+                                <a href="#">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                    </footer>
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                </div>
 </body>
 
 </html>
