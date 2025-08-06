@@ -2,8 +2,8 @@
 html,
 body {
     overflow-x: hidden;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff8e6;
+    font-family: 'Alata', sans-serif;
+    background-color: #FFE5B4;
     color: #333;
 }
 
@@ -31,8 +31,8 @@ img,
 
 /* BUTTON STYLES */
 .btn-orange {
-    background-color: #f58220;
-    color: white;
+    background-color: #FAF9F6;
+    color: #8D6E63;
     box-shadow: 2px 2px 4px #888;
 }
 
@@ -62,11 +62,11 @@ img,
     max-width: 600px;
 }
 
-/* LOGO */
-.logo-text {
-    font-family: 'Comic Sans MS', cursive;
-    color: #6b3e26;
+.btn-submit-custom {
+    background-color: #F77F00;
+    color: #FAF9F6;
 }
+
 
 .container-fluid img {
     display: block;
@@ -211,7 +211,7 @@ img,
 
 /* HOW WE OPERATE SECTION */
 .how-we-operate-wrapper {
-    background-color: #fef5ea;
+    background-color: #8D6E63;
     border-radius: 12px;
     padding: 2rem;
     max-width: 700px;
@@ -228,7 +228,7 @@ img,
 }
 
 .special-bg {
-    background-color: #ff914d;
+    background-color: #F77F00;
     color: white;
     border-radius: 10px;
     padding: 1.25rem;
@@ -239,7 +239,7 @@ img,
 }
 
 .default-bg {
-    background-color: #f5f5f5;
+    color: white;
 }
 
 .operate-btn {
