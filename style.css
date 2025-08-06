@@ -40,6 +40,48 @@
         margin-right: auto;
     }
 
+    .contact-form {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    /* Submit button styling */
+    .submit-btn {
+        background-color: #f68b1f;
+        color: white;
+        border: none;
+    }
+
+    /* Locations images full width */
+    .locations img {
+        width: 100%;
+    }
+
+    /* Smaller font size for contact info */
+    .contact-info {
+        font-size: 0.9rem;
+    }
+
+    /* Footer background and padding */
+    footer {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    /* Tablet and up: locations side by side */
+    @media (min-width: 768px) {
+        .locations {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .location-item {
+            width: 30%;
+            text-align: center;
+        }
+    }
 
     .highlight-box {
         background-color: #ffcc6d;
